@@ -9,8 +9,8 @@ int p, q, r, s, t, u;
 
 double eq(double x)
 {
-    return p * exp(-1 * x) + q * sin(x) + r * cos(x) + s * tan(x) + t * x * x
-        + u;
+    return p * exp(-1 * x) + q * sin(x) + r * cos(x) + s * tan(x) + t * x * x +
+           u;
 }
 
 int main()

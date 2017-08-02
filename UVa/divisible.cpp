@@ -31,8 +31,8 @@ long long process(int i, int cnt, int sum)
         temp += d;
     }
 
-    return dp[i][cnt][sum]
-        = process(i + 1, cnt + 1, temp) + process(i + 1, cnt, sum % d);
+    return dp[i][cnt][sum] =
+               process(i + 1, cnt + 1, temp) + process(i + 1, cnt, sum % d);
 }
 
 int main()

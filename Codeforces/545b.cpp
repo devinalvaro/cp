@@ -14,7 +14,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     string s, t;
     cin >> s >> t;
 

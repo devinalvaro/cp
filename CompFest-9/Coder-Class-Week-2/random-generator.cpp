@@ -28,8 +28,8 @@ int main()
     for (int i = 1; i <= 50; i++) {
         pascal_triangle[i][0] = 1;
         for (int j = 1; j <= i - 1; j++) {
-            pascal_triangle[i][j]
-                = pascal_triangle[i - 1][j] + pascal_triangle[i - 1][j - 1];
+            pascal_triangle[i][j] =
+                pascal_triangle[i - 1][j] + pascal_triangle[i - 1][j - 1];
         }
         pascal_triangle[i][i] = 1;
     }

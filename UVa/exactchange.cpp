@@ -29,8 +29,8 @@ int main()
 
         for (int i = 0; i < n; i++) {
             for (int j = 10000; j >= 0; j--) {
-                if (memo[j] != INT_MAX && j + bill[i] <= 10000
-                    && memo[j] + 1 < memo[j + bill[i]]) {
+                if (memo[j] != INT_MAX && j + bill[i] <= 10000 &&
+                    memo[j] + 1 < memo[j + bill[i]]) {
                     memo[j + bill[i]] = memo[j] + 1;
                 }
             }

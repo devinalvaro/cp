@@ -16,7 +16,8 @@
 
 using namespace std;
 
-bool topo_check(const vector<vector<int>> &edge, vector<int> &visited, int u) {
+bool topo_check(const vector<vector<int>> &edge, vector<int> &visited, int u)
+{
     visited[u] = 1;
     bool check = true;
 
@@ -35,7 +36,8 @@ bool topo_check(const vector<vector<int>> &edge, vector<int> &visited, int u) {
     return check;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, m;

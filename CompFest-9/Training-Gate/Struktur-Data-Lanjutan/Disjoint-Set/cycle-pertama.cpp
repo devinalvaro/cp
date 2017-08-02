@@ -18,10 +18,7 @@ using namespace std;
 
 vector<int> parent, level;
 
-int find(int u)
-{
-    return (parent[u] == u ? u : find(parent[u]));
-}
+int find(int u) { return (parent[u] == u ? u : find(parent[u])); }
 
 bool merge(int u, int v)
 {

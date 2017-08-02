@@ -10,14 +10,8 @@ int n, m;
 vector<int> parent, ranks;
 vector<pair<int, pair<int, int>>> edges;
 
-int findSet(int i)
-{
-    return parent[i] == i ? i : findSet(parent[i]);
-}
-bool isSameSet(int u, int v)
-{
-    return findSet(u) == findSet(v);
-}
+int findSet(int i) { return parent[i] == i ? i : findSet(parent[i]); }
+bool isSameSet(int u, int v) { return findSet(u) == findSet(v); }
 
 void joinSet(int u, int v)
 {
@@ -68,8 +62,8 @@ int main()
         for (int i = 0; i < 2 * m; i++) {
             pair<int, pair<int, int>> currentEdge = edges[i];
 
-            if (!isSameSet(
-                    currentEdge.second.first, currentEdge.second.second)) {
+            if (!isSameSet(currentEdge.second.first,
+                           currentEdge.second.second)) {
                 mstCost += currentEdge.first;
                 joinSet(currentEdge.second.first, currentEdge.second.second);
             }

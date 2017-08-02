@@ -44,17 +44,17 @@ int main()
         if (d > dist[u.first][u.second])
             continue;
 
-        vector<vector<int>> dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+        vector<vector<int>> dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         for (int i = 0; i < 4; i++) {
             ii v(u.first + dir[i][0], u.second + dir[i][1]);
 
             if (v.first < 0 || v.first >= n || v.second < 0 || v.second >= n)
                 continue;
 
-            if (dist[u.first][u.second] + (pulau[v.first][v.second] - '0')
-                < dist[v.first][v.second]) {
-                dist[v.first][v.second]
-                    = dist[u.first][u.second] + (pulau[v.first][v.second] - '0');
+            if (dist[u.first][u.second] + (pulau[v.first][v.second] - '0') <
+                dist[v.first][v.second]) {
+                dist[v.first][v.second] =
+                    dist[u.first][u.second] + (pulau[v.first][v.second] - '0');
 
                 pq.push(iii(dist[v.first][v.second], ii(v.first, v.second)));
             }

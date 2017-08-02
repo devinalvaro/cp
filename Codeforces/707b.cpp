@@ -28,8 +28,8 @@ int main()
 
     vector<pair<int, pair<int, int>>> roads(m, pair<int, pair<int, int>>());
     for (int i = 0; i < m; i++) {
-        cin >> roads[i].second.first >> roads[i].second.second
-            >> roads[i].first;
+        cin >> roads[i].second.first >> roads[i].second.second >>
+            roads[i].first;
     }
 
     int a;
@@ -44,8 +44,8 @@ int main()
         int u = roads[i].second.first;
         int v = roads[i].second.second;
 
-        if ((isStorage[u] && !isStorage[v])
-            || (!isStorage[u] && isStorage[v])) {
+        if ((isStorage[u] && !isStorage[v]) ||
+            (!isStorage[u] && isStorage[v])) {
             cout << roads[i].first << endl;
 
             return 0;

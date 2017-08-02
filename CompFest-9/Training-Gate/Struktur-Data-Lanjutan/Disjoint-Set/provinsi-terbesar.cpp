@@ -19,10 +19,7 @@ using namespace std;
 vector<int> parent, level;
 vector<long long> size;
 
-int find(int u)
-{
-    return (parent[u] == u ? u : find(parent[u]));
-}
+int find(int u) { return (parent[u] == u ? u : find(parent[u])); }
 
 void merge(int ancestor_u, int ancestor_v)
 {

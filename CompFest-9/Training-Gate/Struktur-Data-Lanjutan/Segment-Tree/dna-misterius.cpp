@@ -16,7 +16,8 @@
 
 using namespace std;
 
-class SegmentTree {
+class SegmentTree
+{
 private:
     size_t n;
     string s;
@@ -28,7 +29,8 @@ private:
 
     int mid(int left, int right) { return (left + right) >> 1; }
 
-    void build(int parent, int left, int right) {
+    void build(int parent, int left, int right)
+    {
         if (left == right) {
             segment_tree[parent].first = segment_tree[parent].second =
                 (s[left] == '(' ? 1 : -1);
@@ -47,7 +49,8 @@ private:
                     segment_tree[right_child(parent)].second);
     }
 
-    void update(int parent, int left, int right, int k) {
+    void update(int parent, int left, int right, int k)
+    {
         if (left == right) {
             segment_tree[parent].first = segment_tree[parent].second =
                 -segment_tree[parent].first;
@@ -70,7 +73,8 @@ private:
     }
 
 public:
-    SegmentTree(string _s) {
+    SegmentTree(string _s)
+    {
         s = _s;
         n = s.size();
 
@@ -80,12 +84,14 @@ public:
 
     void update(int k) { update(0, 0, n - 1, k); }
 
-    bool is_balanced() {
+    bool is_balanced()
+    {
         return segment_tree[0].first == 0 && segment_tree[0].second == 0;
     }
 };
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int t;

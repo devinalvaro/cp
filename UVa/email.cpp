@@ -17,7 +17,7 @@ int main()
     map<int, vector<pair<int, int>>> adj;
     vector<int> dist;
     priority_queue<pair<int, int>, vector<pair<int, int>>,
-        greater<pair<int, int>>>
+                   greater<pair<int, int>>>
         pq;
 
     while (tc--) {

@@ -16,7 +16,8 @@
 
 using namespace std;
 
-long long to_decimal(const vector<int> &segment_tree_vector) {
+long long to_decimal(const vector<int> &segment_tree_vector)
+{
     long long result = 0;
     for (int i = 0; i < 64; i++) {
         result += ((long long)segment_tree_vector[i] << i);
@@ -24,7 +25,8 @@ long long to_decimal(const vector<int> &segment_tree_vector) {
     return result;
 }
 
-class SegmentTree {
+class SegmentTree
+{
 private:
     int n;
     vector<long long> arr;
@@ -35,7 +37,8 @@ private:
 
     int right_child(int parent) { return (parent << 1) + 2; }
 
-    void build(int parent, int left, int right) {
+    void build(int parent, int left, int right)
+    {
         if (left > right)
             return;
 
@@ -58,7 +61,8 @@ private:
         }
     }
 
-    long long get_sum(int parent, int left, int right, int i, int j) {
+    long long get_sum(int parent, int left, int right, int i, int j)
+    {
         if (lazy[parent] != 0) {
             for (int i = 0; i < 64; i++) {
                 if (lazy[parent] & ((long long)1 << i)) {
@@ -86,7 +90,8 @@ private:
                get_sum(right_child(parent), mid + 1, right, i, j);
     }
 
-    void update_range(int parent, int left, int right, int i, int j, int b) {
+    void update_range(int parent, int left, int right, int i, int j, int b)
+    {
         if (lazy[parent] != 0) {
             for (int i = 0; i < 64; i++) {
                 if (lazy[parent] & ((long long)1 << i)) {
@@ -129,7 +134,8 @@ private:
     }
 
 public:
-    SegmentTree(int _n, vector<long long> &_arr) {
+    SegmentTree(int _n, vector<long long> &_arr)
+    {
         n = _n;
         arr = _arr;
 
@@ -141,12 +147,14 @@ public:
 
     long long get_sum(int i, int j) { return get_sum(0, 0, n - 1, i, j); }
 
-    void update_range(int i, int j, int b) {
+    void update_range(int i, int j, int b)
+    {
         update_range(0, 0, n - 1, i, j, b);
     }
 };
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, q;

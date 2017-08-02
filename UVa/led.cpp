@@ -106,8 +106,8 @@ void backtrack(int index, int threshold, bool burned[])
     }
 
     if (threshold >= 0 && !match) {
-        if (isDeriv(bits[index], threshold, burned)
-            && checkBurn(bits[index], burned)) {
+        if (isDeriv(bits[index], threshold, burned) &&
+            checkBurn(bits[index], burned)) {
             backtrack(index + 1, threshold - 1, burned);
         }
 

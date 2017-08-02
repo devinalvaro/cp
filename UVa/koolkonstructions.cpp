@@ -18,7 +18,8 @@ using namespace std;
 
 const int N = 100000;
 
-class SegmentTree {
+class SegmentTree
+{
 private:
     int n;
     vector<long long> arr;
@@ -29,7 +30,8 @@ private:
 
     int right_child(int parent) { return (parent << 1) + 2; }
 
-    void build(int parent, int left, int right) {
+    void build(int parent, int left, int right)
+    {
         if (left > right)
             return;
 
@@ -47,7 +49,8 @@ private:
                                segment_tree[right_child(parent)];
     }
 
-    long long get_sum(int parent, int left, int right, int i, int j) {
+    long long get_sum(int parent, int left, int right, int i, int j)
+    {
         if (lazy[parent] != 0) {
             segment_tree[parent] += (right - left + 1) * lazy[parent];
 
@@ -71,7 +74,8 @@ private:
                get_sum(right_child(parent), mid + 1, right, i, j);
     }
 
-    void update_range(int parent, int left, int right, int i, int j, int y) {
+    void update_range(int parent, int left, int right, int i, int j, int y)
+    {
         if (lazy[parent] != 0) {
             segment_tree[parent] += (right - left + 1) * lazy[parent];
 
@@ -106,7 +110,8 @@ private:
     }
 
 public:
-    SegmentTree(int _n, vector<long long> &_arr) {
+    SegmentTree(int _n, vector<long long> &_arr)
+    {
         n = _n;
         arr = _arr;
 
@@ -118,12 +123,14 @@ public:
 
     long long get_sum(int i, int j) { return get_sum(0, 0, n - 1, i, j); }
 
-    void update_range(int i, int j, int y) {
+    void update_range(int i, int j, int y)
+    {
         update_range(0, 0, n - 1, i, j, y);
     }
 };
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int t;

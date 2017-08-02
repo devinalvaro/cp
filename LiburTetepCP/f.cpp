@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int dir[] = { -1, 0, 1 };
+int dir[] = {-1, 0, 1};
 
 float distance(int a, int b, int i, int j)
 {

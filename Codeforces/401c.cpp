@@ -31,9 +31,9 @@ int main()
     }
 
     int single_zero = 0; // 0
-    int single_one = 0; // 1
-    int duo = 0; // 10
-    int triple = 0; // 110
+    int single_one = 0;  // 1
+    int duo = 0;         // 10
+    int triple = 0;      // 110
 
     if (n > m) {
         single_zero = n - m;

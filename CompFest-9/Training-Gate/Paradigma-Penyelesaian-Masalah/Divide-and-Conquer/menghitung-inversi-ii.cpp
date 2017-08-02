@@ -15,7 +15,8 @@
 
 using namespace std;
 
-long long merge(vector<long long> &a, vector<long long> &temp, int left, int mid, int right)
+long long merge(vector<long long> &a, vector<long long> &temp, int left,
+                int mid, int right)
 {
     long long inversion = 0;
 
@@ -44,7 +45,8 @@ long long merge(vector<long long> &a, vector<long long> &temp, int left, int mid
     return inversion;
 }
 
-long long merge_sort(vector<long long> &a, vector<long long> &temp, int left, int right)
+long long merge_sort(vector<long long> &a, vector<long long> &temp, int left,
+                     int right)
 {
     long long inversion = 0;
 

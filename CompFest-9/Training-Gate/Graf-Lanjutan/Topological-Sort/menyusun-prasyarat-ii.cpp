@@ -17,7 +17,8 @@
 using namespace std;
 
 bool topo_sort(const vector<vector<int>> &edge, vector<int> &visited, int u,
-               vector<int> &topo_array) {
+               vector<int> &topo_array)
+{
     visited[u] = 1;
     bool check = true;
 
@@ -38,7 +39,8 @@ bool topo_sort(const vector<vector<int>> &edge, vector<int> &visited, int u,
     return check;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, m;

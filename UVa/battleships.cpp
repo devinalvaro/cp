@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-int n, dr[] = { 1, 0, -1, 0 }, dc[] = { 0, 1, 0, -1 };
+int n, dr[] = {1, 0, -1, 0}, dc[] = {0, 1, 0, -1};
 char area[120][120];
 
 int floodFill(int r, int c)

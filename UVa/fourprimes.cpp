@@ -18,7 +18,8 @@ using namespace std;
 
 const int N = 10001000;
 
-void sieve_of_eratosthenes(vector<bool> &is_prime) {
+void sieve_of_eratosthenes(vector<bool> &is_prime)
+{
     for (int p = 2; p * p <= N; p++) {
         if (is_prime[p]) {
             for (int i = p * 2; i <= N; i += p) {
@@ -28,7 +29,8 @@ void sieve_of_eratosthenes(vector<bool> &is_prime) {
     }
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     vector<bool> is_prime(N + 1, true);

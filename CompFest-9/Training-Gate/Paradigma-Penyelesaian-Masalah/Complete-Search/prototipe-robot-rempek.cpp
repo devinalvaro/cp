@@ -42,8 +42,8 @@ int main()
 
         int min_dist = INT_MAX;
         for (int j = 0; j < (int)belida.size(); j++) {
-            min_dist = min(
-                min_dist, abs(r - belida[j].first) + abs(c - belida[j].second));
+            min_dist = min(min_dist, abs(r - belida[j].first) +
+                                         abs(c - belida[j].second));
         }
 
         cout << min_dist << '\n';

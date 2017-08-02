@@ -21,7 +21,7 @@ int main()
 
     int n, q;
     cin >> n >> q;
-    
+
     vector<int> p(n);
     for (int i = 0; i < n; i++) {
         cin >> p[i];

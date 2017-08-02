@@ -13,7 +13,8 @@ using namespace std;
 
 string kb("qwertyuiop asdfghjkl; zxcvbnm,./");
 
-int main() {
+int main()
+{
     char d;
     string s;
     cin >> d >> s;

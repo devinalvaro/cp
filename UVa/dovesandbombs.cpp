@@ -95,9 +95,9 @@ int main()
         }
 
         sort(candidates.begin(), candidates.end(),
-            [](const pair<int, int>& a, const pair<int, int>& b) {
-                return compare(a, b);
-            });
+             [](const pair<int, int> &a, const pair<int, int> &b) {
+                 return compare(a, b);
+             });
 
         for (int i = 0; i < m; i++) {
             cout << candidates[i].first << ' ' << candidates[i].second << '\n';

@@ -9,9 +9,8 @@ typedef pair<int, int> ii;
 typedef pair<int, ii> iii;
 typedef pair<int, iii> iiii;
 
-int dir[][4]
-    = { { 1, 0, 0, 0 }, { -1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, -1, 0, 0 },
-        { 0, 0, 1, 0 }, { 0, 0, -1, 0 }, { 0, 0, 0, 1 }, { 0, 0, 0, -1 } };
+int dir[][4] = {{1, 0, 0, 0}, {-1, 0, 0, 0}, {0, 1, 0, 0}, {0, -1, 0, 0},
+                {0, 0, 1, 0}, {0, 0, -1, 0}, {0, 0, 0, 1}, {0, 0, 0, -1}};
 
 int main()
 {
@@ -49,23 +48,23 @@ int main()
 
             int u1 = u.first == -1 ? 9 : u.first % 10;
             int u2 = u.second.first == -1 ? 9 : u.second.first % 10;
-            int u3
-                = u.second.second.first == -1 ? 9 : u.second.second.first % 10;
-            int u4 = u.second.second.second == -1 ? 9
-                                                  : u.second.second.second % 10;
+            int u3 =
+                u.second.second.first == -1 ? 9 : u.second.second.first % 10;
+            int u4 =
+                u.second.second.second == -1 ? 9 : u.second.second.second % 10;
 
             for (int i = 0; i < 8; i++) {
                 iiii v(u1 + dir[i][0],
-                    iii(u2 + dir[i][1], ii(u3 + dir[i][2], u4 + dir[i][3])));
+                       iii(u2 + dir[i][1], ii(u3 + dir[i][2], u4 + dir[i][3])));
 
                 int v1 = v.first == -1 ? 9 : v.first % 10;
                 int v2 = v.second.first == -1 ? 9 : v.second.first % 10;
                 int v3 = v.second.second.first == -1
-                    ? 9
-                    : v.second.second.first % 10;
+                             ? 9
+                             : v.second.second.first % 10;
                 int v4 = v.second.second.second == -1
-                    ? 9
-                    : v.second.second.second % 10;
+                             ? 9
+                             : v.second.second.second % 10;
 
                 if (conf[v1][v2][v3][v4] == -1)
                     continue;

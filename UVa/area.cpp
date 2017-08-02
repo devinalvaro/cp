@@ -62,8 +62,8 @@ int main()
                             min_price = price;
                         }
 
-                        if (price <= p && area == max_area
-                            && price < min_price) {
+                        if (price <= p && area == max_area &&
+                            price < min_price) {
                             min_price = price;
                         }
                     }

@@ -49,8 +49,8 @@ int main()
                     /*   cout << "c[j] - c[i] = " << c[j] << " - " << c[i]; */
                     /*   cout << " = " << c[j] - c[i] << '\n'; */
 
-                    dp[i][j]
-                        = min(dp[i][j], dp[i][k] + dp[k][j] + (c[j] - c[i]));
+                    dp[i][j] =
+                        min(dp[i][j], dp[i][k] + dp[k][j] + (c[j] - c[i]));
 
                     /* cout << "dp[i][j]: " << dp[i][j] << "\n\n"; */
                 }

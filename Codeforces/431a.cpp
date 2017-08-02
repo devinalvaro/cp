@@ -14,7 +14,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     vector<int> a(4);
     cin >> a[1] >> a[2] >> a[3] >> a[4];
 

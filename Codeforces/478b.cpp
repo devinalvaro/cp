@@ -15,10 +15,7 @@
 
 using namespace std;
 
-long long binomial(long long n)
-{
-    return n * (n - 1) / 2;
-}
+long long binomial(long long n) { return n * (n - 1) / 2; }
 
 int main()
 {

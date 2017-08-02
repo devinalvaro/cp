@@ -30,9 +30,9 @@ int main()
         for (int i = 0; i < m; i++) {
             for (int j = 0; j <= 300; j++) {
                 for (int k = 0; k <= 300; k++) {
-                    if (dp[j][k] != INT_MAX && j + coin[i][0] <= 300
-                        && k + coin[i][1] <= 300
-                        && dp[j + coin[i][0]][k + coin[i][1]] > dp[j][k] + 1) {
+                    if (dp[j][k] != INT_MAX && j + coin[i][0] <= 300 &&
+                        k + coin[i][1] <= 300 &&
+                        dp[j + coin[i][0]][k + coin[i][1]] > dp[j][k] + 1) {
                         dp[j + coin[i][0]][k + coin[i][1]] = dp[j][k] + 1;
                     }
                 }

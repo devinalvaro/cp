@@ -40,16 +40,16 @@ int main()
         long long prev_num = a[i] / k;
         long long next_num = a[i] * k;
 
-        if (num_pos.find(prev_num) == num_pos.end()
-            || num_pos.find(next_num) == num_pos.end())
+        if (num_pos.find(prev_num) == num_pos.end() ||
+            num_pos.find(next_num) == num_pos.end())
             continue;
 
-        long long prev_num_sum
-            = lower_bound(num_pos[prev_num].begin(), num_pos[prev_num].end(), i)
-            - num_pos[prev_num].begin();
-        long long next_num_sum
-            = num_pos[next_num].end() - upper_bound(num_pos[next_num].begin(),
-                                            num_pos[next_num].end(), i);
+        long long prev_num_sum =
+            lower_bound(num_pos[prev_num].begin(), num_pos[prev_num].end(), i) -
+            num_pos[prev_num].begin();
+        long long next_num_sum =
+            num_pos[next_num].end() -
+            upper_bound(num_pos[next_num].begin(), num_pos[next_num].end(), i);
 
         ways += prev_num_sum * next_num_sum;
     }

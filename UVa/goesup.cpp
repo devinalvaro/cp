@@ -26,8 +26,8 @@ int main()
     while (cin >> n) {
         a[i] = n; // melakukan input
         int pos = lower_bound(ans, ans + len,
-                      a[i])
-            - ans; // mencari posisi yang tepat di ans untuk input baru
+                              a[i]) -
+                  ans; // mencari posisi yang tepat di ans untuk input baru
         ans[pos] = a[i];
         ans_pos[pos] = i;
         p[i] = pos > 0 ? ans_pos[pos - 1] : -1;

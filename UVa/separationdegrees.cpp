@@ -46,8 +46,8 @@ int main()
         for (int k = 0; k < p; k++) {
             for (int i = 0; i < p; i++) {
                 for (int j = 0; j < p; j++) {
-                    degree[i][j]
-                        = min(degree[i][j], degree[i][k] + degree[k][j]);
+                    degree[i][j] =
+                        min(degree[i][j], degree[i][k] + degree[k][j]);
                 }
             }
         }

@@ -16,15 +16,9 @@
 
 using namespace std;
 
-bool is_odd(unsigned long long n)
-{
-    return n & 1;
-}
+bool is_odd(unsigned long long n) { return n & 1; }
 
-bool is_even(unsigned long long n)
-{
-    return !is_odd(n);
-}
+bool is_even(unsigned long long n) { return !is_odd(n); }
 
 bool is_doubly_even(unsigned long long n)
 {

@@ -35,7 +35,7 @@ int main()
 
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < c; j++) {
-            if (maze[i][j] == - 1)
+            if (maze[i][j] == -1)
                 continue;
 
             if (i > 0 && maze[i - 1][j] != -1) {

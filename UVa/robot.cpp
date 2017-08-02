@@ -12,8 +12,8 @@ typedef vector<ii> vii;
 typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 
-int nr[] = { -1, 0, 1, 0 };
-int nc[] = { 0, 1, 0, -1 };
+int nr[] = {-1, 0, 1, 0};
+int nc[] = {0, 1, 0, -1};
 
 int main()
 {
@@ -45,8 +45,8 @@ int main()
 
         for (int i = 0; i < m - 1; i++) {
             for (int j = 0; j < n - 1; j++) {
-                store[i][j] = grid[i][j] || grid[i + 1][j] || grid[i][j + 1]
-                    || grid[i + 1][j + 1];
+                store[i][j] = grid[i][j] || grid[i + 1][j] || grid[i][j + 1] ||
+                              grid[i + 1][j + 1];
             }
         }
 
@@ -96,8 +96,8 @@ int main()
                     (u.first + i) % 4, ii(u.second.first, u.second.second));
 
                 if (!vis[v.second.first][v.second.second][v.first]) {
-                    dist[v.second.first][v.second.second][v.first]
-                        = dist[u.second.first][u.second.second][u.first] + 1;
+                    dist[v.second.first][v.second.second][v.first] =
+                        dist[u.second.first][u.second.second][u.first] + 1;
 
                     q.push(v);
 
@@ -109,10 +109,10 @@ int main()
             for (int k = 1; k <= 3; k++) {
                 pair<int, ii> v = pair<int, ii>(
                     u.first, ii(u.second.first + (k * nr[u.first]),
-                                 u.second.second + (k * nc[u.first])));
+                                u.second.second + (k * nc[u.first])));
 
-                if (v.second.first < 0 || v.second.first >= m - 1
-                    || v.second.second < 0 || v.second.second >= n - 1) {
+                if (v.second.first < 0 || v.second.first >= m - 1 ||
+                    v.second.second < 0 || v.second.second >= n - 1) {
                     break; // the neighbor is out of map
                 }
 
@@ -121,8 +121,8 @@ int main()
                 }
 
                 if (!vis[v.second.first][v.second.second][v.first]) {
-                    dist[v.second.first][v.second.second][v.first]
-                        = dist[u.second.first][u.second.second][u.first] + 1;
+                    dist[v.second.first][v.second.second][v.first] =
+                        dist[u.second.first][u.second.second][u.first] + 1;
 
                     q.push(v);
 

@@ -15,8 +15,8 @@
 
 using namespace std;
 
-bool comp(
-    const pair<long long, long long>& a, const pair<long long, long long>& b)
+bool comp(const pair<long long, long long> &a,
+          const pair<long long, long long> &b)
 {
     if (a.second == b.second) {
         return a.first < b.first;

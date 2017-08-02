@@ -77,8 +77,8 @@ int main()
             }
         }
 
-        cout << accumulate(
-                    segment_count.begin() + k - 1, segment_count.end(), 0)
+        cout << accumulate(segment_count.begin() + k - 1, segment_count.end(),
+                           0)
              << '\n';
     }
 }

@@ -50,8 +50,7 @@ int main()
                     if (i > 0 && j > 0)
                         result += petak[i - 1][j - 1];
 
-                    best_result
-                        = max(best_result, result);
+                    best_result = max(best_result, result);
                 }
             }
         }

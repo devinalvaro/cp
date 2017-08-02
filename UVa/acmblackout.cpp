@@ -9,15 +9,9 @@ using namespace std;
 vector<int> parent, ranks;
 vector<pair<int, pair<int, int>>> edges;
 
-int findSet(int u)
-{
-    return parent[u] == u ? u : findSet(parent[u]);
-}
+int findSet(int u) { return parent[u] == u ? u : findSet(parent[u]); }
 
-bool isSameSet(int u, int v)
-{
-    return findSet(u) == findSet(v);
-}
+bool isSameSet(int u, int v) { return findSet(u) == findSet(v); }
 
 void join(int u, int v)
 {

@@ -23,7 +23,7 @@ void power(long long F[2][2], long long n)
     power(F, n / 2);
     multiply(F, F);
 
-    long long M[2][2] = { { 1, 1 }, { 1, 0 } };
+    long long M[2][2] = {{1, 1}, {1, 0}};
     if (n % 2 != 0) {
         multiply(F, M);
     }
@@ -34,15 +34,12 @@ long long fb(long long n)
     if (n == 0)
         return 0;
 
-    long long F[2][2] = { { 1, 1 }, { 1, 0 } };
+    long long F[2][2] = {{1, 1}, {1, 0}};
     power(F, n - 1);
     return F[0][0];
 }
 
-long long ft(long long n)
-{
-    return 2 * (fb(n + 2) - 1) - n;
-}
+long long ft(long long n) { return 2 * (fb(n + 2) - 1) - n; }
 
 int main()
 {

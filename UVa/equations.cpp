@@ -28,8 +28,8 @@ int main()
                 for (int k = -100; k <= 100; k++) {
                     if (found) {
                         break;
-                    } else if (i != k && i != j && j != k && i + j + k == a
-                        && i * j * k == b && i * i + j * j + k * k == c) {
+                    } else if (i != k && i != j && j != k && i + j + k == a &&
+                               i * j * k == b && i * i + j * j + k * k == c) {
                         found = true;
                         x = i;
                         y = j;

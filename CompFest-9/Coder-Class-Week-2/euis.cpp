@@ -17,7 +17,8 @@ using namespace std;
 
 const long long MOD = 1000000007;
 
-long long pow2(long long e) {
+long long pow2(long long e)
+{
     e <<= 1;
     return e % MOD;
 }

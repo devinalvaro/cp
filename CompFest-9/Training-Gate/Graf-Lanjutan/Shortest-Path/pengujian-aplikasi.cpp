@@ -17,7 +17,8 @@
 using namespace std;
 
 void find_path(int a, int b, const vector<vector<int>> &parent,
-               vector<int> &shortest_path) {
+               vector<int> &shortest_path)
+{
     if (a != b) {
         find_path(a, parent[a][b], parent, shortest_path);
     }
@@ -25,7 +26,8 @@ void find_path(int a, int b, const vector<vector<int>> &parent,
     shortest_path.push_back(b);
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, m, q;

@@ -43,7 +43,7 @@ int main()
 
                 leap_from = i;
                 i++;
-            } else if (v[i][0] == 1) { // is small stone
+            } else if (v[i][0] == 1) {  // is small stone
                 if (v[i - 1][0] == 1) { // prev is small stone
                     if (v[i][1] - v[leap_from][1] > max_step) {
                         max_step = v[i][1] - v[leap_from][1];

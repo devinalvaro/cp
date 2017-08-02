@@ -14,7 +14,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int n, a, b;
     cin >> n >> a >> b;
 

@@ -68,8 +68,8 @@ int main()
             for (int j = 0; j < m; j++) {
                 cin >> area[i][j];
 
-                if (area[i][j] == 'N' || area[i][j] == 'S' || area[i][j] == 'L'
-                    || area[i][j] == 'O') {
+                if (area[i][j] == 'N' || area[i][j] == 'S' ||
+                    area[i][j] == 'L' || area[i][j] == 'O') {
                     orientation = area[i][j];
                     pos = make_pair(i, j);
                 }

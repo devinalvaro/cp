@@ -16,14 +16,16 @@
 
 using namespace std;
 
-bool is_antiarithmetic(int n, const vector<int> &a, const vector<int> &index) {
+bool is_antiarithmetic(int n, const vector<int> &a, const vector<int> &index)
+{
     for (int i = 1; i <= n; i++) {
         for (int d = 1; d <= n / 2; d++) {
             if (a[i] - d < 0 || a[i] + d >= n) {
                 break;
             }
 
-            if (index[a[i] - d] < index[a[i]] && index[a[i] + d] > index[a[i]]) {
+            if (index[a[i] - d] < index[a[i]] &&
+                index[a[i] + d] > index[a[i]]) {
                 return false;
             }
         }
@@ -32,7 +34,8 @@ bool is_antiarithmetic(int n, const vector<int> &a, const vector<int> &index) {
     return true;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     string s;

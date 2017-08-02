@@ -6,15 +6,9 @@ using namespace std;
 int parent[2002];
 bool done[2002];
 
-int find(int u)
-{
-    return parent[u] == u ? u : find(parent[u]);
-}
+int find(int u) { return parent[u] == u ? u : find(parent[u]); }
 
-void merge(int u, int v)
-{
-    parent[find(u)] = find(v);
-}
+void merge(int u, int v) { parent[find(u)] = find(v); }
 
 int main()
 {

@@ -16,7 +16,8 @@
 
 using namespace std;
 
-class SegmentTree {
+class SegmentTree
+{
 private:
     size_t n;
     vector<int> t;
@@ -28,7 +29,8 @@ private:
 
     int mid(int left, int right) { return (left + right) >> 1; }
 
-    void build(int parent, int left, int right) {
+    void build(int parent, int left, int right)
+    {
         if (left == right) {
             segment_tree[parent] = t[left];
 
@@ -42,7 +44,8 @@ private:
                                    segment_tree[right_child(parent)]);
     }
 
-    int rmq(int parent, int left, int right, int i, int j) {
+    int rmq(int parent, int left, int right, int i, int j)
+    {
         if (right < i || left > j)
             return -1;
         if (left >= i && right <= j) {
@@ -54,7 +57,8 @@ private:
     }
 
 public:
-    SegmentTree(int _n, const vector<int> &_t) {
+    SegmentTree(int _n, const vector<int> &_t)
+    {
         n = _n;
         t = _t;
 
@@ -65,7 +69,8 @@ public:
     int rmq(int i, int j) { return rmq(0, 0, n - 1, i, j); }
 };
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n;

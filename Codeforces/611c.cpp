@@ -28,12 +28,12 @@ int main()
     vector<vector<int>> row(h, vector<int>(w)), col(h, vector<int>(w));
     for (int i = 0; i < h; i++)
         for (int j = 1; j < w; j++)
-            row[i][j] = row[i][j - 1]
-                + (field[i][j] == '.' && field[i][j - 1] == '.');
+            row[i][j] =
+                row[i][j - 1] + (field[i][j] == '.' && field[i][j - 1] == '.');
     for (int j = 0; j < w; j++)
         for (int i = 1; i < h; i++)
-            col[i][j] = col[i - 1][j]
-                + (field[i][j] == '.' && field[i - 1][j] == '.');
+            col[i][j] =
+                col[i - 1][j] + (field[i][j] == '.' && field[i - 1][j] == '.');
 
     int q;
     cin >> q;

@@ -15,7 +15,8 @@
 
 using namespace std;
 
-long long gcd(long long a, long long b) {
+long long gcd(long long a, long long b)
+{
     if (a == 0)
         return b;
     return gcd(b % a, a);

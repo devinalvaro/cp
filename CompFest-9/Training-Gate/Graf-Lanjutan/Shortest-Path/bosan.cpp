@@ -25,7 +25,8 @@ const int MOD = 1000000007;
  * dist: resulting vector where distance[e] is distance of e from s
  */
 void dijkstra(int n, int s, map<int, vector<pair<int, int>>> &edges,
-              vector<int> &dist) {
+              vector<int> &dist)
+{
     dist.assign(n + 1, INT_MAX);
     dist[s] = 0; // start at node s
 
@@ -57,8 +58,8 @@ void dijkstra(int n, int s, map<int, vector<pair<int, int>>> &edges,
 }
 
 int count_ways(int u, vector<int> &ways,
-               map<int, vector<pair<int, int>>> &edges,
-               const vector<int> &dist) {
+               map<int, vector<pair<int, int>>> &edges, const vector<int> &dist)
+{
     if (ways[u] != -1)
         return ways[u] % MOD;
 
@@ -76,7 +77,8 @@ int count_ways(int u, vector<int> &ways,
     return ways[u] % MOD;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, m;

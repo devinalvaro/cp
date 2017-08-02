@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     int r, c, br, bc, sr, sc, dr, dc, brn, n;
-    int adjr[] = { 1, 0, -1, 0 }, adjc[] = { 0, 1, 0, -1 };
+    int adjr[] = {1, 0, -1, 0}, adjc[] = {0, 1, 0, -1};
 
     while (true) {
         cin >> r >> c;
@@ -44,12 +44,12 @@ int main()
             q.pop();
 
             for (int i = 0; i < 4; i++) {
-                pair<int, int> v
-                    = make_pair(u.first + adjr[i], u.second + adjc[i]);
+                pair<int, int> v =
+                    make_pair(u.first + adjr[i], u.second + adjc[i]);
 
-                if (v.first >= 0 && v.first < r && v.second >= 0 && v.second < c
-                    && !irq[v.first][v.second]
-                    && dist[v.first][v.second] == -1) {
+                if (v.first >= 0 && v.first < r && v.second >= 0 &&
+                    v.second < c && !irq[v.first][v.second] &&
+                    dist[v.first][v.second] == -1) {
                     dist[v.first][v.second] = dist[u.first][u.second] + 1;
                     q.push(v);
                 }

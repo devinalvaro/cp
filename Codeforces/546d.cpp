@@ -17,7 +17,7 @@ using namespace std;
 
 const int N = 5000000;
 
-void sieve_of_eratosthenes(vector<int>& prime_divisor)
+void sieve_of_eratosthenes(vector<int> &prime_divisor)
 {
     for (int p = 2; p * p <= N; p++) {
         if (prime_divisor[p] == -1) {

@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int n;
-    int coins[] = { 1, 5, 10, 25, 50 };
+    int coins[] = {1, 5, 10, 25, 50};
     long long dp[30003];
 
     memset(dp, 0, sizeof(dp));

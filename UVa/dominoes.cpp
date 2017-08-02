@@ -22,8 +22,8 @@ bool backtrack(int i, int x, map<int, vector<int>> doms)
     for (vector<int>::iterator it = doms[x].begin(); it != doms[x].end();
          it++) {
         map<int, vector<int>> newDoms = doms;
-        vector<int>::iterator pos
-            = find(newDoms[x].begin(), newDoms[x].end(), *it);
+        vector<int>::iterator pos =
+            find(newDoms[x].begin(), newDoms[x].end(), *it);
 
         if (pos != newDoms[x].end()) {
             newDoms[x].erase(pos);

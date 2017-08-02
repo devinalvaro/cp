@@ -42,8 +42,8 @@ int main()
             return 0;
         }
 
-        change
-            += ((c[i].first + c[i].second) / 2) - min(c[i].first, c[i].second);
+        change +=
+            ((c[i].first + c[i].second) / 2) - min(c[i].first, c[i].second);
     }
 
     cout << change / 2 << endl;

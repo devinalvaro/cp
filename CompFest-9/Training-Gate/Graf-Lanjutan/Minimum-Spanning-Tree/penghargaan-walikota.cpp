@@ -16,7 +16,8 @@
 
 using namespace std;
 
-class UFDS {
+class UFDS
+{
 private:
     vector<int> parent;
     vector<int> level;
@@ -24,7 +25,8 @@ private:
 public:
     int find(int u) { return (parent[u] == u ? u : find(parent[u])); }
 
-    void merge(int u, int v) {
+    void merge(int u, int v)
+    {
         int ancestor_u = find(u);
         int ancestor_v = find(v);
 
@@ -43,7 +45,8 @@ public:
         }
     }
 
-    UFDS(int n) {
+    UFDS(int n)
+    {
         parent.assign(n + 1, 0);
         for (int i = 1; i <= n; i++) {
             parent[i] = i;
@@ -53,7 +56,8 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(0);
 
     int n, m;

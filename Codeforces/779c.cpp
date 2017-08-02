@@ -14,7 +14,7 @@
 
 using namespace std;
 
-bool comp(pair<int, pair<int, int>>& a, pair<int, pair<int, int>>& b)
+bool comp(pair<int, pair<int, int>> &a, pair<int, pair<int, int>> &b)
 {
     if (a.first == b.first) {
         if (a.second.first == b.second.first) {

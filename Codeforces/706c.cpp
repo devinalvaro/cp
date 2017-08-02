@@ -47,12 +47,12 @@ int main()
             energy[i][0] = min(energy[i][0], energy[i - 1][1]);
         }
 
-        if (energy[i - 1][0] != LLONG_MAX
-            && strings[i].second >= strings[i - 1].first) {
+        if (energy[i - 1][0] != LLONG_MAX &&
+            strings[i].second >= strings[i - 1].first) {
             energy[i][1] = min(energy[i][1], energy[i - 1][0] + c[i]);
         }
-        if (energy[i - 1][1] != LLONG_MAX
-            && strings[i].second >= strings[i - 1].second) {
+        if (energy[i - 1][1] != LLONG_MAX &&
+            strings[i].second >= strings[i - 1].second) {
             energy[i][1] = min(energy[i][1], energy[i - 1][1] + c[i]);
         }
     }

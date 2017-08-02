@@ -23,8 +23,8 @@ int main()
         a /= 10;
     }
 
-    vector<int> primes = { 2, 3, 5, 7 };
-    vector<int> non_primes = { 4, 6, 8, 9 };
+    vector<int> primes = {2, 3, 5, 7};
+    vector<int> non_primes = {4, 6, 8, 9};
 
     vector<int> result;
 

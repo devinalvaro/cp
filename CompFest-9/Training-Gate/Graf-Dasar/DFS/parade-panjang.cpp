@@ -25,7 +25,7 @@ void dfs(int u)
     visited[u] = true;
 
     for (int j = 0; j < (int)edges[u].size(); j++) {
-        pair<int, long  long> v = edges[u][j];
+        pair<int, long long> v = edges[u][j];
 
         if (!visited[v.first]) {
             dfs(v.first);
@@ -54,7 +54,7 @@ int main()
 
     dist.assign(n, LLONG_MIN);
     dist[0] = 0;
-    while(!topo_order.empty()) {
+    while (!topo_order.empty()) {
         int u = topo_order.top();
         topo_order.pop();
 

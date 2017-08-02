@@ -47,7 +47,8 @@ int main()
             continue;
         }
 
-        vector<long long>::iterator j = lower_bound(primes.begin(), primes.end(), p);
+        vector<long long>::iterator j =
+            lower_bound(primes.begin(), primes.end(), p);
         if (*j == p) {
             cout << "YES" << endl;
         } else {

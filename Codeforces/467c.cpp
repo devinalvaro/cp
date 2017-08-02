@@ -37,8 +37,8 @@ int main()
         for (int j = 0; j < k; j++) {
             val[i][j] = val[i - 1][j];
 
-            long long candidate
-                = (j == 0 ? 0 : val[i - m][j - 1]) + (p[i] - p[i - m]);
+            long long candidate =
+                (j == 0 ? 0 : val[i - m][j - 1]) + (p[i] - p[i - m]);
             if (candidate > val[i][j]) {
                 val[i][j] = candidate;
             }

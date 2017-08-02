@@ -50,16 +50,16 @@ int main()
             dotCount--;
             if (x > 0 && x < n - 1 && isDot[x - 1] && isDot[x + 1]) {
                 groupCount++;
-            } else if ((x == 0 || !isDot[x - 1])
-                && (x == n - 1 || !isDot[x + 1])) {
+            } else if ((x == 0 || !isDot[x - 1]) &&
+                       (x == n - 1 || !isDot[x + 1])) {
                 groupCount--;
             }
         } else if (!wasDot && willDot) {
             dotCount++;
             if (x > 0 && x < n - 1 && isDot[x - 1] && isDot[x + 1]) {
                 groupCount--;
-            } else if ((x == 0 || !isDot[x - 1])
-                && (x == n - 1 || !isDot[x + 1])) {
+            } else if ((x == 0 || !isDot[x - 1]) &&
+                       (x == n - 1 || !isDot[x + 1])) {
                 groupCount++;
             }
         }

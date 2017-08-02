@@ -15,7 +15,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int k, n, w;
     cin >> k >> n >> w;
 

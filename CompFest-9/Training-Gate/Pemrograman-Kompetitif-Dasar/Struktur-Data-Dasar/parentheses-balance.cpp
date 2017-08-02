@@ -31,9 +31,9 @@ int main()
         for (int i = 0; i < (int)s.size(); i++) {
             if (s[i] == '(' || s[i] == '[') {
                 parens.push(s[i]);
-            } else if (!parens.empty()
-                && ((s[i] == ')' && parens.top() == '(')
-                       || (s[i] == ']' && parens.top() == '['))) {
+            } else if (!parens.empty() &&
+                       ((s[i] == ')' && parens.top() == '(') ||
+                        (s[i] == ']' && parens.top() == '['))) {
                 parens.pop();
 
                 continue;

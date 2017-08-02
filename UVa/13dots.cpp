@@ -30,8 +30,9 @@ int buy(int i, int spending)
         return memo[i][spending];
     }
 
-    return memo[i][spending] = max(buy(i + 1, spending),
-               items[i][1] + buy(i + 1, spending + items[i][0]));
+    return memo[i][spending] =
+               max(buy(i + 1, spending),
+                   items[i][1] + buy(i + 1, spending + items[i][0]));
 }
 
 int main()

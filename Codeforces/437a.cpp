@@ -30,30 +30,34 @@ int main()
     int great = 0;
     char choice = 'C';
 
-    if ((size_a <= size_b / 2 && size_a <= size_c / 2 && size_a <= size_d / 2)
-        || (size_a >= size_b * 2 && size_a >= size_c * 2
-               && size_a >= size_d * 2)) {
+    if ((size_a <= size_b / 2 && size_a <= size_c / 2 &&
+         size_a <= size_d / 2) ||
+        (size_a >= size_b * 2 && size_a >= size_c * 2 &&
+         size_a >= size_d * 2)) {
         great++;
 
         choice = 'A';
     }
-    if ((size_b <= size_a / 2 && size_b <= size_c / 2 && size_b <= size_d / 2)
-        || (size_b >= size_a * 2 && size_b >= size_c * 2
-               && size_b >= size_d * 2)) {
+    if ((size_b <= size_a / 2 && size_b <= size_c / 2 &&
+         size_b <= size_d / 2) ||
+        (size_b >= size_a * 2 && size_b >= size_c * 2 &&
+         size_b >= size_d * 2)) {
         great++;
 
         choice = 'B';
     }
-    if ((size_c <= size_b / 2 && size_c <= size_a / 2 && size_c <= size_d / 2)
-        || (size_c >= size_b * 2 && size_c >= size_a * 2
-               && size_c >= size_d * 2)) {
+    if ((size_c <= size_b / 2 && size_c <= size_a / 2 &&
+         size_c <= size_d / 2) ||
+        (size_c >= size_b * 2 && size_c >= size_a * 2 &&
+         size_c >= size_d * 2)) {
         great++;
 
         choice = 'C';
     }
-    if ((size_d <= size_b / 2 && size_d <= size_c / 2 && size_d <= size_a / 2)
-        || (size_d >= size_a * 2 && size_d >= size_c * 2
-               && size_d >= size_a * 2)) {
+    if ((size_d <= size_b / 2 && size_d <= size_c / 2 &&
+         size_d <= size_a / 2) ||
+        (size_d >= size_a * 2 && size_d >= size_c * 2 &&
+         size_d >= size_a * 2)) {
         {
             great++;
 

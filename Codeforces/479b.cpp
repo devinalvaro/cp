@@ -35,8 +35,8 @@ int main()
         /* cout << *max_tower << ' ' << *min_tower << endl; */
         /* cout << stability << endl; */
 
-        result.push_back(pair<int, int>(
-            max_tower - towers.begin(), min_tower - towers.begin()));
+        result.push_back(pair<int, int>(max_tower - towers.begin(),
+                                        min_tower - towers.begin()));
 
         (*max_tower)--;
         (*min_tower)++;

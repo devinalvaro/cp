@@ -27,7 +27,7 @@ int main()
     vector<int> order = {0, 1, 2, 3, 4};
     long long best = INT_MIN;
     do {
-        long long sum = 0; 
+        long long sum = 0;
         sum += 2 * (g[order[4]][order[3]] + g[order[3]][order[4]]);
         sum += 2 * (g[order[0]][order[4]] + g[order[4]][order[0]]);
         sum += g[order[1]][order[2]] + g[order[2]][order[1]];

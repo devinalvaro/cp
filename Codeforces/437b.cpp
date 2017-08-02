@@ -15,10 +15,7 @@
 
 using namespace std;
 
-int lowbit(int n)
-{
-    return (n & -n);
-}
+int lowbit(int n) { return (n & -n); }
 
 int main()
 {
