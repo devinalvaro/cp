@@ -13,3 +13,6 @@ $(build): $(src)
 
 clean:
 	@rm -f $(build) $(input)
+
+run: $(build)
+	@./$(build) < $(input)
